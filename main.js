@@ -35,10 +35,10 @@ function calculateResult() {
   }
 
   resultHolder = Number(result)
-  // const toString1 = resultHolder.toString();
+  const toString1 = resultHolder.toString();
 
   function decCheck() {
-    if (resultHolder.includes('.')) {
+    if (toString1.includes('.')) {
       const decimalPlace = result.toString().indexOf(".");
       const stringifyResult = Number(result.toString().substring(decimalPlace + 1));
 
