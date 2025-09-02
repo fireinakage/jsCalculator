@@ -6,17 +6,17 @@ let number1 = "";
 let number2 = "";
 let result = "";
 
-idChoice1.addEventListener("change", function(value) {
+idChoice1.addEventListener("change", function() {
   number1 = event.target.value
   console.log(number1)
 });
 
-idChoice2.addEventListener("change", function(value) {
+idChoice2.addEventListener("change", function() {
   operator = event.target.value
   console.log(operator)
 });
 
-idChoice3.addEventListener("change", function(value) {
+idChoice3.addEventListener("change", function() {
   number2 = event.target.value
   console.log(number2)
 });
