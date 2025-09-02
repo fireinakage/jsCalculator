@@ -8,16 +8,20 @@ let result = "";
 
 idChoice1.addEventListener("change", function(value) {
   number1 = event.target.value
+  console.log(number1)
 });
 
 idChoice2.addEventListener("change", function(value) {
   operator = event.target.value
+  console.log(operator)
 });
 
 idChoice3.addEventListener("change", function(value) {
   number2 = event.target.value
+  console.log(number2)
 });
 
 function calculateResult() {
   result = number1 operator number2
+  console.log(result)
 }
