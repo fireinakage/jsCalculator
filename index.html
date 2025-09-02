@@ -1,21 +1,41 @@
 <html>
-    <head>
-        <title>JavaScript Calculator</title>
-    </head>
-    <body>
-        <h1>JavaScript Calculator</h1>
-        <form>
-            <input type="number" id="inputBox1" placeholder="0" required>
-            <select id="choiceBox" required>
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
-                <option value="/">/</option>
-            </select>
-            <input type="number" id="inputBox2" placeholder="0"required> 
+
+<head>
+    <title>JavaScript Calculator</title>
+
+    <!-- Open Graph / Discord Embed -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fireinakage.github.io/jsCalculator/" />
+    <meta property="og:site_name" content="jsCalculator" />
+    <meta property="og:title" content="jsCalculator" />
+    <meta property="og:description"
+        content="A calculator that does the basics, but for you!" />
+    <meta property="og:image" content="images.jpg" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://fireinakage.github.io/jsCalculator/" />
+    <meta name="twitter:title" content="jsCalculator" />
+    <meta name="twitter:description"
+        content="A calculator that does the basics, but for you!" />
+    <meta name="twitter:image" content="images.jpg" />
+</head>
+
+<body>
+    <h1>JavaScript Calculator</h1>
+    <form>
+        <input type="number" id="inputBox1" placeholder="0" required>
+        <select id="choiceBox" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="inputBox2" placeholder="0" required>
         </br></br> <button id="buttonOne" type="button" onclick="calculateResult()">Calculate Result</button>
-        </form>
-        <script src="main.js"></script>
-        <div id="outputDiv"></div>
-    </body>
+    </form>
+    <script src="main.js"></script>
+    <div id="outputDiv"></div>
+</body>
+
 </html>
