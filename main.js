@@ -7,7 +7,7 @@ let number2 = "";
 let result = "";
 
 idChoice1.addEventListener("change", function() {
-  number1 = event.target.value
+  number1 = Number(event.target.value)
   console.log(number1)
 });
 
@@ -17,7 +17,7 @@ idChoice2.addEventListener("change", function() {
 });
 
 idChoice3.addEventListener("change", function() {
-  number2 = event.target.value
+  number2 = Number(event.target.value)
   console.log(number2)
 });
 
