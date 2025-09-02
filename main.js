@@ -24,4 +24,6 @@ idChoice3.addEventListener("change", function(value) {
 function calculateResult() {
   result = number1 operator number2
   console.log(result)
+
+  outputDiv.textContent = " Your result is " + result + "."
 }
