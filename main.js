@@ -1,3 +1,4 @@
+const idChoice1 = document.getElementById('')
 let operator = "";
 let number1 = "";
 let number2 = "";
