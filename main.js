@@ -6,24 +6,57 @@ let number1 = "";
 let number2 = "";
 let result = "";
 
-idChoice1.addEventListener("change", function() {
-  number1 = Number(event.target.value)
+idChoice1.addEventListener("input", function () {
+  number1 = Number(idChoice1.value)
   console.log(number1)
 });
 
-idChoice2.addEventListener("change", function() {
-  operator = event.target.value
+idChoice2.addEventListener("input", function () {
+  operator = idChoice2.value
   console.log(operator)
 });
 
-idChoice3.addEventListener("change", function() {
-  number2 = Number(event.target.value)
+idChoice3.addEventListener("input", function () {
+  number2 = Number(idChoice3.value)
   console.log(number2)
 });
 
 function calculateResult() {
-  result = number1 operator number2
+  if (operator === "+") {
+    result = number1 + number2;
+  } else if (operator === "-") {
+    result = number1 - number2;
+  } else if (operator === "*") {
+    result = number1 * number2;
+  } else if (operator === "/") {
+    result = number1 / number2;
+  } else if (operator === '') {
+    result = number1 + number2
+  }
+
+  resultHolder = Number(result)
+  // const toString1 = resultHolder.toString();
+
+  function decCheck() {
+    if (resultHolder.includes('.')) {
+      const decimalPlace = result.toString().indexOf(".");
+      const stringifyResult = Number(result.toString().substring(decimalPlace + 1));
+
+      if (stringifyResult > 9) {
+        result = resultHolder.toFixed(2)
+      } else if (stringifyResult > 0) {
+        result = resultHolder.toFixed(1)
+        console.log(stringifyResult + 'hi')
+      }
+    }
+  }
+
+
+
+
+
+
   console.log(result)
 
-  outputDiv.textContent = " Your result is " + result + "."
+  outputDiv.textContent = " Your result is " + result
 }
