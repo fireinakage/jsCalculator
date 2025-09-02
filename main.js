@@ -55,7 +55,7 @@ function calculateResult() {
 
 
 
-
+  decCheck()
   console.log(result)
 
   outputDiv.textContent = " Your result is " + result
