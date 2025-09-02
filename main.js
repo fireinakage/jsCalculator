@@ -5,7 +5,17 @@ let operator = "";
 let number1 = "";
 let number2 = "";
 
-.addEventListener("change", myScript);
+idChoice1.addEventListener("change", function(value) {
+  number1 = event.target.value
+});
+
+idChoice2.addEventListener("change", function(value) {
+  operator = event.target.value
+});
+
+idChoice3.addEventListener("change", function(value) {
+  number2 = event.target.value
+});
 
 function calculateResult(firstNumber, symbol, secondNumber) {
   operator = symbol;
