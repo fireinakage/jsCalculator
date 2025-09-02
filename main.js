@@ -46,7 +46,6 @@ function calculateResult() {
         result = resultHolder.toFixed(2)
       } else if (stringifyResult > 0) {
         result = resultHolder.toFixed(1)
-        console.log(stringifyResult + 'hi')
       }
     }
   }
