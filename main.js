@@ -6,6 +6,19 @@ let number1 = "";
 let number2 = "";
 let result = "";
 
+function decCheck(num) {
+    if (num.includes('.')) {
+      const decimalPlace = result.toString().indexOf(".");
+      const stringifyResult = Number(result.toString().substring(decimalPlace + 1));
+
+      if (stringifyResult > 9) {
+        result = resultHolder.toFixed(2)
+      } else if (stringifyResult > 0) {
+        result = resultHolder.toFixed(1)
+      }
+    }
+  }
+
 idChoice1.addEventListener("input", function () {
   number1 = Number(idChoice1.value)
   console.log(number1)
@@ -30,6 +43,11 @@ function calculateResult() {
     result = number1 * number2;
   } else if (operator === "/") {
     result = number1 / number2;
+    if (number2 === 0) {
+      result = undefined
+    }
+  } else if (operator = '^') {
+    result = number1 ** number2
   } else if (operator === '') {
     result = number1 + number2
   }
@@ -37,24 +55,9 @@ function calculateResult() {
   resultHolder = Number(result)
   const toString1 = resultHolder.toString();
 
-  function decCheck() {
-    if (toString1.includes('.')) {
-      const decimalPlace = result.toString().indexOf(".");
-      const stringifyResult = Number(result.toString().substring(decimalPlace + 1));
-
-      if (stringifyResult > 9) {
-        result = resultHolder.toFixed(2)
-      } else if (stringifyResult > 0) {
-        result = resultHolder.toFixed(1)
-      }
-    }
-  }
 
 
-
-
-
-  decCheck()
+  decCheck(toString1)
   console.log(result)
 
   outputDiv.textContent = " Your result is " + result
