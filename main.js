@@ -52,6 +52,8 @@ function calculateResult() {
     result = number1 + number2
   }
 
+  console.log(number1 + operator + number2)
+
   resultHolder = Number(result)
   const toString1 = resultHolder.toString();
 
