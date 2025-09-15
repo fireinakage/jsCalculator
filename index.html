@@ -8,32 +8,42 @@
     <meta property="og:url" content="https://fireinakage.github.io/jsCalculator/" />
     <meta property="og:site_name" content="jsCalculator" />
     <meta property="og:title" content="jsCalculator" />
-    <meta property="og:description"
-        content="A calculator that does the basics, but for you!" />
+    <meta property="og:description" content="A calculator that does the basics, but for you!" />
     <meta property="og:image" content="https://i.postimg.cc/Pfc8GGLH/images.jpg" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://fireinakage.github.io/jsCalculator/" />
     <meta name="twitter:title" content="jsCalculator" />
-    <meta name="twitter:description"
-        content="A calculator that does the basics, but for you!" />
+    <meta name="twitter:description" content="A calculator that does the basics, but for you!" />
     <meta name="twitter:image" content="https://i.postimg.cc/Pfc8GGLH/images.jpg" />
+
+    <!-- Links styles.css for formating -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <h1>JavaScript Calculator</h1>
     <form>
-        <input type="number" id="inputBox1" placeholder="0" required>
-        <select id="choiceBox" required>
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
-            <option value="^">^</option>
-        </select>
-        <input type="number" id="inputBox2" placeholder="0" required>
-        </br></br> <button id="buttonOne" type="button" onclick="calculateResult()">Calculate Result</button>
+        <div id="div1">
+            <input type="number" id="inputBox1" placeholder="0" required>
+            <select id="choiceBox" required>
+                <option value="+" selected="selected">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="^">^</option>
+            </select>
+
+            <input type="number" id="inputBox2" placeholder="0" required>
+        </div>
+        <button id="buttonOne" type="button" onclick="calculateResult()">Calculate Result</button>
     </form>
     <script src="main.js"></script>
     <div id="outputDiv"></div>

@@ -1,0 +1,103 @@
+body {
+    background-color: #222222;
+    margin: 10px;
+}
+
+h1 {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 400%;
+    background-color: #224022;
+    padding: 20px;
+    margin: 10px;
+    border-color: #1b331b;
+    border-style: solid;
+}
+
+#div1 {
+    background: #224022;
+    border-color: #1b331b;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000000;
+    border-style: solid;
+}
+
+input {
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    text-align: center;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+}
+
+input::placeholder {
+    color: #446044;
+}
+
+select {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    border-style: solid;
+    text-align: center;
+    padding: 5px;
+    outline:0px;
+    border-color: #224022;
+}
+
+button {
+    background: #224022;
+    border-color: #1b331b;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000000;
+    border-style: solid;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    margin: 10px;
+}
+
+button:hover {
+    background: #446044;
+    cursor: pointer;
+}
+
+.button-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    background-color: rgba(68, 96, 68, 0.5);
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+#outputDiv {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    margin: 10px;
+
+}

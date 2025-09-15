@@ -46,7 +46,7 @@ function calculateResult() {
     if (number2 === 0) {
       result = undefined
     }
-  } else if (operator = '^') {
+  } else if (operator === '^') {
     result = number1 ** number2
   } else if (operator === '') {
     result = number1 + number2
@@ -62,3 +62,23 @@ function calculateResult() {
 
   outputDiv.textContent = " Your result is " + result
 }
+
+
+
+document.querySelectorAll('button').forEach(button => {
+    button.classList.add('button-ripple');
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        const rect = button.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+        ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+        button.appendChild(ripple);
+        ripple.addEventListener('animationend', () => {
+            ripple.remove();
+        });
+    });
+});
+
